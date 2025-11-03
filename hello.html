@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebFinder</title>
+        <link rel="stylesheet" href="hello.css">
+    </head>
+    <body>
+        <h2 style="color: aliceblue;" id="b1">WebFinder</h2>
+        <Button href="hello.html">Home</Button>
+        <button id="b2">About Us</button>
+        <button id="b3">Products</button>
+        <hr>
+        <h2 style="color: aliceblue;" id="webfinder1">WebFinder</h2>
+        <h1 style="color: aliceblue;" id="SecureSearch1">SecureSearch</h1>
+        <form id="urlForm">
+             <label for="idValue" style="color: aliceblue;">Enter Search:</label>
+            <input type="text" id="idValue" name="idValue" required>
+            <button type="submit" style="background-color: #0066CC">Go</button>
+        </form>
+        <body>
+        <div class="content-wrap">
+            </div>
+
+        <footer style="background-color: gray;">
+            
+            <p id="fp1">© WebFinder</p>
+            <a href="https://google.com" id="fp2">API</p>
+            <p href="mailto:tymachine16@gmail.com" id="fp3">Information</p>
+            <p href="" id="fp4">Github</p>
+        </footer>
+        </body>
+
+        <script>document.getElementById('urlForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const idInput = document.getElementById('idValue');
+            const newId = idInput.value;
+
+            
+            const baseUrl = 'https://www.google.com/search?q=hi';
+            
+            
+            const newUrl = baseUrl.replace('hi', newId);
+
+            window.location.replace(newUrl); 
+        });</script>
+
+    </body>
+    
+
+</html>
